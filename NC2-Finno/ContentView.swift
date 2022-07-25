@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ListView()
+            
+            MainView()
+        }
+        .frame(minWidth: 600, minHeight: 400)
+    }
+}
+
+struct ListView: View {
+    var body: some View {
+        Text("List")
+    }
+}
+
+struct MainView: View {
+    var body: some View {
+        Text("Main")
     }
 }
 
