@@ -13,5 +13,7 @@ struct NC2_FinnoApp: App {
         WindowGroup {
             ContentView()
         }
+        //Hiding Title Bar
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
