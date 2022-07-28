@@ -10,52 +10,35 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var landingPageVMData = LandingPageViewModel()
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Note.date, ascending: false)])
+    private var notes: FetchedResults<Note>
+    
+    @State private var notesTitle: String = ""
+    
     var body: some View {
         LandingPage()
-//        NavigationView {
-//            List {
-//                Section(header: Text("Notes")) {
-////                    TextField("Search", text: $landingPageVMData.search)
-//                    HStack {
-//                        Image(systemName: "note.text")
-//                            .foregroundColor(.blue)
-//                        Text("My Notes")
+        
+            .toolbar {
+                ToolbarItem {
+//                    Button(action: addNote(notesTitle: notesTitle)) {
+//                        Label("Add Item", systemImage: "plus")
 //                    }
-//                    .searchable(text: $landingPageVMData.search)
-//                }
-//                Section(header: Text("Others")) {
-//                    HStack {
-//                        Image(systemName: "person.2.fill")
-//                            .foregroundColor(.blue)
-//                        Text("Explore")
+                    
+//                    Button("Save") {
+//                        addNote(title: notesTitle)
 //                    }
-//                }
-//
-//                Spacer()
-//
-//                Section(header: Text("Tags")) {
-//                    HStack {
-//                        Image(systemName: "circle.fill")
-//                            .font(.system(size: 8))
-//                            .foregroundColor(.blue)
-//                        Text("Blue")
+//                    Button(action: updateNote(note)) {
+//                        Label("Add Item", systemImage: "plus")
 //                    }
-//                    HStack {
-//                        Image(systemName: "circle.fill")
-//                            .font(.system(size: 8))
-//                            .foregroundColor(.red)
-//                        Text("Red")
-//                    }
-//                }
-//
-//                Spacer()
-//
-//            }
-//            .searchable(text: $landingPageVMData.search)
-//        }
+                }
+            }
+//            .navigationBarItems(trailing: Button("Add Task") {
+//                addNote()
+//            })
+        }
     }
-    
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

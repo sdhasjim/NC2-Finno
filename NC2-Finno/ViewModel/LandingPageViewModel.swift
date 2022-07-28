@@ -12,4 +12,6 @@ class LandingPageViewModel: ObservableObject {
     @Published var selectedTab = "My Notes"
     
     @Published var search = ""
+    
+    @Published var editTitle = ""
 }
