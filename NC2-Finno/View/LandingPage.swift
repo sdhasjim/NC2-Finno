@@ -22,85 +22,13 @@ struct LandingPage: View {
     @State private var notesContent: String = ""
     
     var body: some View {
-        //        SideBarSection(title: "Notes")
-        //        SideBarTab(image: "note.text", title: "My Notes", selectedTab: $landingPageVMData.selectedTab)
-        //        SideBarSection(title: "Others")
-        //        SideBarTab(image: "person.2.fill", title: "Explore", selectedTab: $landingPageVMData.selectedTab)
         NavigationView {
             List {
                 SearchBarTab(image: "magnifyingglass", title: "Search", selectedTab: $landingPageVMData.selectedTab, search: $landingPageVMData.search)
                 Section(header: Text("Notes")) {
                     SideBarTab(image: "note.text", title: "My Notes", count: notes.count, selectedTab: $landingPageVMData.selectedTab)
-                    //                    NavigationLink {
-                    //                        NavigationView {
-                    //                            List {
-                    //                                ForEach(notes) { note in
-                    //                                    NavigationLink {
-                    //        //                                Text(note.title ?? "Untitled")
-                    //                                        Text("Created at \(note.date!, formatter: itemFormatter)")
-                    //                                        TextField("Enter title", text: $notesTitle)
-                    //                                            .textFieldStyle(PlainTextFieldStyle())
-                    //                                            .padding()
-                    //                                            .font(.system(size: 22) .weight(.bold))
-                    //                                        TextField("Type your content here", text: $notesContent)
-                    //                                            .textFieldStyle(PlainTextFieldStyle())
-                    //                                            .padding()
-                    //                                            .font(.system(size: 13) .weight(.regular))
-                    //                                        Spacer()
-                    //                //                            .onTapGesture(count: 3, perform: {
-                    //                //                                updateNote(note)
-                    //                //                            })
-                    //                                    } label: {
-                    //                                        VStack(alignment: .leading) {
-                    //                                            HStack {
-                    //                                                Text(note.title!)
-                    //                                                    .font(.system(size: 13) .weight(.semibold))
-                    //                                                Spacer()
-                    //                                                Text(note.date!, formatter: itemFormatter)
-                    //                                            }
-                    //                                            Text(note.content!)
-                    //                                                .font(.system(size: 10) .weight(.regular))
-                    //                                        }
-                    //                                    }
-                    //                                    .contextMenu(ContextMenu(menuItems: {
-                    //                                        Button(action: {
-                    //                                            withAnimation {
-                    //                                                viewContext.delete(note)
-                    //                                                saveContext()
-                    //                                            }
-                    //
-                    //                                        }, label: {
-                    //                                            Text("Delete")
-                    //                                        })
-                    //                //                        Button(action: updateNote(note)) {
-                    //                //                            Label("Add Item", systemImage: "plus")
-                    //                //                        }
-                    //                //                        Button(action: {
-                    //                //                            viewContext.delete(note)
-                    //                //                            saveContext()
-                    //                //                        }, label: {
-                    //                //                            Text("Update")
-                    //                //                        })
-                    //                                    }))
-                    //                                }
-                    //                            }
-                    //                //            .navigationBarItems(trailing: Button("Add Task") {
-                    //                //                addNote()
-                    //                //            })
-                    //                        }
-                    //                    } label: {
-                    //                        SideBarTab(image: "note.text", title: "My Notes", selectedTab: $landingPageVMData.selectedTab)
-                    //                    }
-                    //                    .buttonStyle(PlainButtonStyle())
-                    
-                    
                 }
                 Section(header: Text("Others")) {
-                    //                    HStack {
-                    //                        Image(systemName: "person.2.fill")
-                    //                            .foregroundColor(.blue)
-                    //                        Text("Explore")
-                    //                    }
                     SideBarTab(image: "person.2.fill", title: "Explore", count: 0, selectedTab: $landingPageVMData.selectedTab)
                 }
                 
@@ -192,6 +120,8 @@ struct LandingPage: View {
                                         
                                         Spacer()
                                         Text(note.date!, formatter: itemFormatter)
+                                            .font(.system(size: 10))
+                                            .foregroundColor(.secondary)
                                     }
                                     
                                     if (note.content! == "") {
@@ -215,15 +145,6 @@ struct LandingPage: View {
                                 }, label: {
                                     Text("Delete")
                                 })
-                                //                        Button(action: updateNote(note)) {
-                                //                            Label("Add Item", systemImage: "plus")
-                                //                        }
-                                //                                Button(action: {
-                                //                                    viewContext.delete(note)
-                                //                                    saveContext()
-                                //                                }, label: {
-                                //                                    Text("Update")
-                                //                                })
                             }))
                         }
                     }
@@ -298,7 +219,8 @@ struct LandingPage: View {
 
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateStyle = .short
+//    formatter.dateStyle = .short
+    formatter.dateFormat = "MMM dd"
     //    formatter.timeStyle = .medium
     return formatter
 }()
