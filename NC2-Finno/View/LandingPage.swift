@@ -28,12 +28,7 @@ struct LandingPage: View {
         //        SideBarTab(image: "person.2.fill", title: "Explore", selectedTab: $landingPageVMData.selectedTab)
         NavigationView {
             List {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.gray)
-                    TextField("Search", text: $landingPageVMData.search)
-                        .textFieldStyle(PlainTextFieldStyle())
-                }
+                SearchBarTab(image: "magnifyingglass", title: "Search", selectedTab: $landingPageVMData.selectedTab, search: $landingPageVMData.search)
                 Section(header: Text("Notes")) {
                     SideBarTab(image: "note.text", title: "My Notes", count: notes.count, selectedTab: $landingPageVMData.selectedTab)
                     //                    NavigationLink {
@@ -151,7 +146,9 @@ struct LandingPage: View {
                             NavigationLink {
                                 //                                Text(note.title ?? "Untitled")
                                 VStack {
-                                    Text("Created at \(note.date!, formatter: itemFormatter)")
+                                    Text("Created at \(note.date!, formatter: itemFormatter2)")
+                                        .font(.system(size: 10))
+                                        .foregroundColor(.secondary)
                                     TextField("Enter title", text: $notesTitle)
                                         .textFieldStyle(PlainTextFieldStyle())
                                         .padding()
@@ -199,11 +196,13 @@ struct LandingPage: View {
                                     
                                     if (note.content! == "") {
                                         Text("No additional text")
+                                            .font(.system(size: 10) .weight(.regular))
+                                            .padding(.vertical, 5)
                                     } else {
                                         Text(note.content!)
                                             .font(.system(size: 10) .weight(.regular))
+                                            .padding(.vertical, 5)
                                     }
-                                    
                                 }
                             }
                             .contextMenu(ContextMenu(menuItems: {
@@ -233,7 +232,13 @@ struct LandingPage: View {
                     //            })
                 }
             case "Explore": Text("Explore")
-            case "Bots": Text("Bots")
+            case "Search":
+                VStack {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 72))
+                    Text("Searching My Notes")
+                        .font(.system(size: 18))
+                }
             case "Edit": Text("Edit")
             case "Settings": Text("Settings")
             default: Text("")
@@ -295,6 +300,13 @@ private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     //    formatter.timeStyle = .medium
+    return formatter
+}()
+
+private let itemFormatter2: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
     return formatter
 }()
 

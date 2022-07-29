@@ -19,6 +19,7 @@
 		3FA3013C2891059E006226F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3013B2891059E006226F3 /* Persistence.swift */; };
 		3FA301402892168F006226F3 /* NoteOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3013F2892168F006226F3 /* NoteOverview.swift */; };
 		3FA3014228923813006226F3 /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3014128923813006226F3 /* TestTextField.swift */; };
+		3FC9949F28936E4E00935C2B /* SearchBarTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9949E28936E4E00935C2B /* SearchBarTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3FA3013B2891059E006226F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3FA3013F2892168F006226F3 /* NoteOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteOverview.swift; sourceTree = "<group>"; };
 		3FA3014128923813006226F3 /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
+		3FC9949E28936E4E00935C2B /* SearchBarTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				3FA3010D288F87ED006226F3 /* LandingPage.swift */,
 				3FA3014128923813006226F3 /* TestTextField.swift */,
 				3FA30114288F9A56006226F3 /* SideBarTab.swift */,
+				3FC9949E28936E4E00935C2B /* SearchBarTab.swift */,
 				3FA30116288F9ACE006226F3 /* SideBarSection.swift */,
 				3FA3013F2892168F006226F3 /* NoteOverview.swift */,
 			);
@@ -193,6 +196,7 @@
 				3FA3014228923813006226F3 /* TestTextField.swift in Sources */,
 				3FA301402892168F006226F3 /* NoteOverview.swift in Sources */,
 				3FA300CC288E3F89006226F3 /* NC2_FinnoApp.swift in Sources */,
+				3FC9949F28936E4E00935C2B /* SearchBarTab.swift in Sources */,
 				3FA3011A28904A81006226F3 /* Notes.xcdatamodeld in Sources */,
 				3FA30115288F9A56006226F3 /* SideBarTab.swift in Sources */,
 				3FA30117288F9ACE006226F3 /* SideBarSection.swift in Sources */,
