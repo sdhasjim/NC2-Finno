@@ -11,6 +11,15 @@
 		3FA300CE288E3F89006226F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA300CD288E3F89006226F3 /* ContentView.swift */; };
 		3FA300D0288E3F8B006226F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA300CF288E3F8B006226F3 /* Assets.xcassets */; };
 		3FA300D3288E3F8B006226F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA300D2288E3F8B006226F3 /* Preview Assets.xcassets */; };
+		3FA3010E288F87ED006226F3 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3010D288F87ED006226F3 /* LandingPage.swift */; };
+		3FA30112288F953E006226F3 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30111288F953E006226F3 /* LandingPageViewModel.swift */; };
+		3FA30115288F9A56006226F3 /* SideBarTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30114288F9A56006226F3 /* SideBarTab.swift */; };
+		3FA30117288F9ACE006226F3 /* SideBarSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30116288F9ACE006226F3 /* SideBarSection.swift */; };
+		3FA3011A28904A81006226F3 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3011828904A81006226F3 /* Notes.xcdatamodeld */; };
+		3FA3013C2891059E006226F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3013B2891059E006226F3 /* Persistence.swift */; };
+		3FA301402892168F006226F3 /* NoteOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3013F2892168F006226F3 /* NoteOverview.swift */; };
+		3FA3014228923813006226F3 /* TestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3014128923813006226F3 /* TestTextField.swift */; };
+		3FC9949F28936E4E00935C2B /* SearchBarTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9949E28936E4E00935C2B /* SearchBarTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		3FA300CF288E3F8B006226F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FA300D2288E3F8B006226F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FA300D4288E3F8B006226F3 /* NC2_Finno.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NC2_Finno.entitlements; sourceTree = "<group>"; };
+		3FA3010D288F87ED006226F3 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		3FA30111288F953E006226F3 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
+		3FA30114288F9A56006226F3 /* SideBarTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTab.swift; sourceTree = "<group>"; };
+		3FA30116288F9ACE006226F3 /* SideBarSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarSection.swift; sourceTree = "<group>"; };
+		3FA3011928904A81006226F3 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		3FA3013B2891059E006226F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3FA3013F2892168F006226F3 /* NoteOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteOverview.swift; sourceTree = "<group>"; };
+		3FA3014128923813006226F3 /* TestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextField.swift; sourceTree = "<group>"; };
+		3FC9949E28936E4E00935C2B /* SearchBarTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +70,13 @@
 		3FA300CA288E3F89006226F3 /* NC2-Finno */ = {
 			isa = PBXGroup;
 			children = (
+				3FA3010C288F87C4006226F3 /* ViewModel */,
+				3FA3010B288F87C0006226F3 /* Model */,
+				3FA3010A288F87B9006226F3 /* View */,
 				3FA300CB288E3F89006226F3 /* NC2_FinnoApp.swift */,
 				3FA300CD288E3F89006226F3 /* ContentView.swift */,
+				3FA3013B2891059E006226F3 /* Persistence.swift */,
+				3FA3011828904A81006226F3 /* Notes.xcdatamodeld */,
 				3FA300CF288E3F8B006226F3 /* Assets.xcassets */,
 				3FA300D4288E3F8B006226F3 /* NC2_Finno.entitlements */,
 				3FA300D1288E3F8B006226F3 /* Preview Content */,
@@ -67,6 +90,34 @@
 				3FA300D2288E3F8B006226F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FA3010A288F87B9006226F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FA3010D288F87ED006226F3 /* LandingPage.swift */,
+				3FA3014128923813006226F3 /* TestTextField.swift */,
+				3FA30114288F9A56006226F3 /* SideBarTab.swift */,
+				3FC9949E28936E4E00935C2B /* SearchBarTab.swift */,
+				3FA30116288F9ACE006226F3 /* SideBarSection.swift */,
+				3FA3013F2892168F006226F3 /* NoteOverview.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FA3010B288F87C0006226F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FA3010C288F87C4006226F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FA30111288F953E006226F3 /* LandingPageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +191,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA300CE288E3F89006226F3 /* ContentView.swift in Sources */,
+				3FA3013C2891059E006226F3 /* Persistence.swift in Sources */,
+				3FA30112288F953E006226F3 /* LandingPageViewModel.swift in Sources */,
+				3FA3014228923813006226F3 /* TestTextField.swift in Sources */,
+				3FA301402892168F006226F3 /* NoteOverview.swift in Sources */,
 				3FA300CC288E3F89006226F3 /* NC2_FinnoApp.swift in Sources */,
+				3FC9949F28936E4E00935C2B /* SearchBarTab.swift in Sources */,
+				3FA3011A28904A81006226F3 /* Notes.xcdatamodeld in Sources */,
+				3FA30115288F9A56006226F3 /* SideBarTab.swift in Sources */,
+				3FA30117288F9ACE006226F3 /* SideBarSection.swift in Sources */,
+				3FA3010E288F87ED006226F3 /* LandingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "NC2-Finno/NC2_Finno.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -275,6 +336,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -292,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "NC2-Finno/NC2_Finno.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -302,6 +365,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -336,6 +400,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FA3011828904A81006226F3 /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FA3011928904A81006226F3 /* Notes.xcdatamodel */,
+			);
+			currentVersion = 3FA3011928904A81006226F3 /* Notes.xcdatamodel */;
+			path = Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3FA300C0288E3F89006226F3 /* Project object */;
 }
